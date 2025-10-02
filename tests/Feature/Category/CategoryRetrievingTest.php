@@ -8,7 +8,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Models\User;
 
-class CategoryRetrivalTest extends TestCase
+class CategoryRetrievingTest extends TestCase
 {
     use RefreshDatabase;
 //    protected User $user;
