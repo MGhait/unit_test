@@ -60,4 +60,16 @@ class CategoryRetrievingTest extends TestCase
 //    {
 //        return User::factory()->create();
 //    }
+
+    public function test_check_if_categories_show_page_contains_right_content(): void
+    {
+        $category = Category::factory()->create();
+        $response = $this->get(route('categories.show', $category));
+
+        $response->assertStatus(200)
+            ->assertViewIs('categories.show')
+            ->assertViewHas('category', $category)
+            ->assertSeeText($category->name)
+            ->assertSeeText($category->description);
+    }
 }
