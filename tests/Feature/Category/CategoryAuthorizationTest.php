@@ -65,7 +65,7 @@ class CategoryAuthorizationTest extends TestCase
     public function test_guest_cannot_delete_category()
     {
         $category = Category::factory()->create();
-        
+
         $response = $this->delete(route('categories.destroy', $category));
 
         $response->assertStatus(302)

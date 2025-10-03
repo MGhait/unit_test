@@ -8,7 +8,7 @@ use Illuminate\Contracts\Cache\Store;
 use App\Http\Resources\CategoryResource;
 use App\Http\Requests\StoreCategoryRequest;
 
-class ApiCategoryController extends Controller
+class APICategoryController extends Controller
 {
     public function index()
     {
